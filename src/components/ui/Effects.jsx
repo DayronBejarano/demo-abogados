@@ -47,7 +47,7 @@ export const SpotlightCard = ({ children, className = "", glowColor = "rgba(251,
   );
 };
 
-// Botón Corporativo Oro (Más sobrio, menos "gamer")
+// Botón Corporativo Oro
 export const MagicGlowButton = ({ children, onClick, icon: Icon, className = "" }) => {
   return (
     <motion.button

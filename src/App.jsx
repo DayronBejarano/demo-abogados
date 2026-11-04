@@ -8,10 +8,11 @@ import {
   ChevronRight, 
   Building2, 
   FileText, 
-  Lock 
+  Lock,
+  Cpu, 
+  Phone
 } from 'lucide-react';
 
-// IMPORTAMOS LOS MÓDULOS DE ARTE CINEMATOGRÁFICO
 import { 
   AmbientBackground, 
   SpotlightCard, 
@@ -39,7 +40,7 @@ const App = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-400 selection:text-slate-950 relative overflow-hidden">
+    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-400 selection:text-slate-950 relative overflow-hidden pb-24">
       
       {/* FONDO ATMOSFÉRICO DE LUJO */}
       <AmbientBackground />
@@ -73,7 +74,6 @@ const App = () => {
       <section className="relative z-10 pt-36 pb-20 px-6 lg:pt-48 lg:pb-32">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           
-          {/* TEXTO PRINCIPAL */}
           <ScrollReveal>
             <div className="max-w-2xl">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-400 text-xs font-semibold mb-6 uppercase tracking-widest backdrop-blur-md">
@@ -106,7 +106,6 @@ const App = () => {
             </div>
           </ScrollReveal>
 
-          {/* TARJETA VISUAL PREMIUM */}
           <ScrollReveal delay={0.2}>
             <div className="relative h-[480px] lg:h-[540px] rounded-2xl bg-slate-900 overflow-hidden border border-white/10 shadow-2xl">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-40 mix-blend-luminosity"></div>
@@ -152,7 +151,7 @@ const App = () => {
         </ScrollReveal>
       </section>
 
-      {/* ÁREAS DE PRÁCTICA (CON SPOTLIGHT CARDS) */}
+      {/* ÁREAS DE PRÁCTICA */}
       <section id="areas" className="relative z-10 py-24 px-6 max-w-7xl mx-auto">
         <ScrollReveal>
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-16">
@@ -171,7 +170,6 @@ const App = () => {
             const Icono = area.icono;
             return (
               <ScrollReveal key={idx} delay={idx * 0.1}>
-                {/* Reemplazamos el div tradicional por nuestra SpotlightCard con resplandor dorado */}
                 <SpotlightCard className="h-full group">
                   <div className="bg-slate-950 p-3.5 rounded-lg w-fit border border-white/5 mb-6 group-hover:border-amber-500/30 transition-colors shadow-inner">
                     <Icono className="w-6 h-6 text-amber-500" />
@@ -191,6 +189,36 @@ const App = () => {
           })}
         </div>
       </section>
+
+      {/* BANNER COMERCIAL DE ADQUISICIÓN */}
+      <div className="fixed bottom-0 left-0 right-0 z-[100] bg-slate-950/95 backdrop-blur-2xl border-t border-amber-500/30 p-4 shadow-[0_-20px_40px_rgba(0,0,0,0.6)]">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3 w-full sm:w-auto">
+            <div className="bg-amber-500/10 p-2 rounded-lg border border-amber-500/30 shrink-0">
+              <Cpu className="w-6 h-6 text-amber-500 animate-pulse" />
+            </div>
+            <div>
+              <p className="text-slate-200 text-sm font-bold tracking-wide">
+                Demo B2B Comercial <span className="text-amber-500 font-normal opacity-80">| DB Tech Studio</span>
+              </p>
+              <p className="text-slate-400 text-xs font-mono mt-0.5">
+                ¿Le interesa implementar esta arquitectura web premium para su firma legal?
+              </p>
+            </div>
+          </div>
+          
+          <button 
+            onClick={() => {
+              const mensaje = "Hola Ing. Dayron. Estoy viendo su Demo de Abogados y me interesa implementar una plataforma de este nivel para mi firma. ¿Podemos agendar una asesoría comercial?";
+              window.open(`https://wa.me/573104208919?text=${encodeURIComponent(mensaje)}`, '_blank');
+            }}
+            className="w-full sm:w-auto bg-gradient-to-r from-amber-500 to-yellow-600 hover:from-amber-400 hover:to-yellow-500 text-slate-950 px-8 py-3 rounded-lg font-bold text-xs uppercase tracking-widest transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)] hover:shadow-[0_0_30px_rgba(245,158,11,0.5)] flex items-center justify-center gap-2 shrink-0"
+          >
+            <Phone className="w-4 h-4" />
+            Cotizar este Diseño
+          </button>
+        </div>
+      </div>
 
     </div>
   );
