@@ -1,16 +1,30 @@
-# React + Vite
+# ⚖️ High-Status Corporate Law Firm Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Plataforma web corporativa de alto estatus orientada a la conversión B2B para firmas boutique de abogados, consultoras tributarias y despachos de litigio estratégico. Diseñada bajo una arquitectura modular en React 18, optimizada para transmitir máxima autoridad, confidencialidad y carga ultrarrápida.
 
-Currently, two official plugins are available:
+## 🚀 Tech Stack & Tools
+- **Frontend Framework:** React 18 + Vite
+- **Styling Engine:** Tailwind CSS v3.4.17 (Sistema de color ejecutivo: Deep Slate `#020617` / Amber Gold `#F59E0B`)
+- **Animations:** Framer Motion (Transiciones fluidas y efectos escalonados)
+- **Iconography:** Lucide React (Simbología legal y ejecutiva de alta precisión)
+- **Deployment & CI/CD:** Vercel
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 💡 Key Technical & Business Features
+- **Psychology-Driven UX/UI:** Implementación de paleta cromática basada en transmisión de prestigio, confidencialidad y solvencia técnica para clientes corporativos y patrimoniales.
+- **White-Label Architecture:** Estructura de componentes totalmente desacoplada (Hero de conversión, Métricas de éxito, Áreas de práctica) que permite adaptar la plataforma a despachos tributarios, mercantilistas o bancarios en minutos.
+- **Zero-Latency Performance:** Carga asíncrona de recursos, optimización de bundles con Vite y respuesta móvil fluida sin degradación de renderizado.
 
-## React Compiler
+## 🛠️ Local Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+# Clona el repositorio
+git clone [https://github.com/DayronBejarano/demo-abogados.git](https://github.com/DayronBejarano/demo-abogados.git)
 
-## Expanding the ESLint configuration
+# Entra al directorio del proyecto
+cd demo-abogados
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Instala las dependencias de producción
+npm install
+
+# Inicia el servidor de desarrollo local
+npm run dev
