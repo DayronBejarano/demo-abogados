@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1, h2, h3, .font-serif-legal {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+body, button, input, textarea, .font-sans-legal {
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
